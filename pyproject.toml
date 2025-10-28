@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "interior-estimator"
+version = "0.1.0"
+description = "Automated interior estimate generator for interior works such as wallpaper and flooring replacement."
+authors = [ { name = "ChatGPT", email = "noreply@example.com" } ]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+pdf = ["reportlab"]
+web = ["streamlit"]
+
+[project.scripts]
+interior-estimator = "interior_estimator.cli:main"
